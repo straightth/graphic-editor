@@ -1,11 +1,12 @@
 package com.github.straightth.graphic.editor.draw.selection;
 
-import com.github.straightth.graphic.editor.GraphicEditor;
 import com.github.straightth.graphic.editor.draw.shapes.RectangleWithPivot;
 import com.github.straightth.graphic.editor.utils.Coordinate;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+
+import static com.github.straightth.graphic.editor.GraphicEditor.*;
 
 public class SelectionRectangleWithPivot extends RectangleWithPivot {
     private boolean resizeable = true;
@@ -37,13 +38,13 @@ public class SelectionRectangleWithPivot extends RectangleWithPivot {
         this.addEventHandler(MouseEvent.MOUSE_DRAGGED, (
                 final MouseEvent mouseEvent) -> {
             if (!resizeable) {
-                double deltaX = mouseEvent.getSceneX() - lastMouseLocation.x;
-                double deltaY = mouseEvent.getSceneY() - lastMouseLocation.y;
-                if (getX() + deltaX > 0 && getX() + deltaX < GraphicEditor.getCanvasLayout().getWidth()) {
+                double deltaX = (mouseEvent.getSceneX() - lastMouseLocation.x) / getCanvasLayout().getScale();
+                double deltaY = (mouseEvent.getSceneY() - lastMouseLocation.y) / getCanvasLayout().getScale();
+                if (getX() + deltaX > 0 && getX() + deltaX < getCanvasLayout().getWidth()) {
                     setX(getX() + deltaX);
                     lastMouseLocation.x = mouseEvent.getSceneX();
                 }
-                if (getY() + deltaY > 0 && getY() + deltaY < GraphicEditor.getCanvasLayout().getHeight()) {
+                if (getY() + deltaY > 0 && getY() + deltaY < getCanvasLayout().getHeight()) {
                     setY(getY() + deltaY);
                     lastMouseLocation.y = mouseEvent.getSceneY();
                 }

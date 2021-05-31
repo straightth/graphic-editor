@@ -4,23 +4,22 @@ com/github/straightth/graphic/editor/utils/Coordinate.java
  com.github.straightth.graphic.editor.utils.Coordinate
 com/github/straightth/graphic/editor/windows/SaveWindow.java
  com.github.straightth.graphic.editor.windows.SaveWindow
-com/github/straightth/graphic/editor/control/tool/Tool.java
- com.github.straightth.graphic.editor.control.tool.Tool
- com.github.straightth.graphic.editor.control.tool.Tool$1
+com/github/straightth/graphic/editor/view/toolbar/buttons/ColorToggleButton.java
+ com.github.straightth.graphic.editor.view.toolbar.buttons.ColorToggleButton
 com/github/straightth/graphic/editor/draw/events/MyKeyEvent.java
  com.github.straightth.graphic.editor.draw.events.MyKeyEvent
-com/github/straightth/graphic/editor/windows/HelpWindow.java
- com.github.straightth.graphic.editor.windows.HelpWindow
+com/github/straightth/graphic/editor/windows/LoadWindow.java
+ com.github.straightth.graphic.editor.windows.LoadWindow
 com/github/straightth/graphic/editor/view/menubar/menus/tool/SetToolColorMenu.java
  com.github.straightth.graphic.editor.view.menubar.menus.tool.SetToolColorMenu
 com/github/straightth/graphic/editor/view/menubar/menus/canvas/SetCanvasZoomMenu.java
  com.github.straightth.graphic.editor.view.menubar.menus.canvas.SetCanvasZoomMenu
-com/github/straightth/graphic/editor/utils/Binder.java
- com.github.straightth.graphic.editor.utils.Binder
-com/github/straightth/graphic/editor/draw/buffer/BufferedImage.java
- com.github.straightth.graphic.editor.draw.buffer.BufferedImage
-com/github/straightth/graphic/editor/view/menubar/menus/tool/SetToolMenu.java
- com.github.straightth.graphic.editor.view.menubar.menus.tool.SetToolMenu
+com/github/straightth/graphic/editor/view/toolbar/buttons/ZoomToggleButton.java
+ com.github.straightth.graphic.editor.view.toolbar.buttons.ZoomToggleButton
+com/github/straightth/graphic/editor/view/menubar/buttons/SizeRadioMenuItem.java
+ com.github.straightth.graphic.editor.view.menubar.buttons.SizeRadioMenuItem
+com/github/straightth/graphic/editor/draw/Magnifier.java
+ com.github.straightth.graphic.editor.draw.Magnifier
 com/github/straightth/graphic/editor/draw/shapes/RectangleWithPivot.java
  com.github.straightth.graphic.editor.draw.shapes.RectangleWithPivot
  com.github.straightth.graphic.editor.draw.shapes.RectangleWithPivot$1
@@ -37,18 +36,18 @@ com/github/straightth/graphic/editor/windows/AboutWindow.java
 com/github/straightth/utils/Loop.java
  com.github.straightth.utils.Loop
  com.github.straightth.utils.Loop$1
-com/github/straightth/graphic/editor/view/toolbar/MyToolBar.java
- com.github.straightth.graphic.editor.view.toolbar.MyToolBar
-com/github/straightth/graphic/editor/utils/TextBlock.java
- com.github.straightth.graphic.editor.utils.TextBlock
+com/github/straightth/graphic/editor/file/Saver.java
+ com.github.straightth.graphic.editor.file.Saver
+com/github/straightth/graphic/editor/view/toolbar/buttons/SizeToggleButton.java
+ com.github.straightth.graphic.editor.view.toolbar.buttons.SizeToggleButton
 com/github/straightth/graphic/editor/view/menubar/menus/CanvasMenu.java
  com.github.straightth.graphic.editor.view.menubar.menus.CanvasMenu
 com/github/straightth/graphic/editor/utils/TextSizeEvaluator.java
  com.github.straightth.graphic.editor.utils.TextSizeEvaluator
-com/github/straightth/graphic/editor/draw/text/TextRectangleWithPivot.java
- com.github.straightth.graphic.editor.draw.text.TextRectangleWithPivot
-com/github/straightth/graphic/editor/view/menubar/MyMenuBar.java
- com.github.straightth.graphic.editor.view.menubar.MyMenuBar
+com/github/straightth/graphic/editor/file/Loader.java
+ com.github.straightth.graphic.editor.file.Loader
+com/github/straightth/graphic/editor/view/menubar/buttons/ColorRadioMenuItem.java
+ com.github.straightth.graphic.editor.view.menubar.buttons.ColorRadioMenuItem
 com/github/straightth/graphic/editor/view/toolbar/MyToggleGroup.java
  com.github.straightth.graphic.editor.view.toolbar.MyToggleGroup
 com/github/straightth/graphic/editor/utils/CSSHandler.java
@@ -59,37 +58,36 @@ com/github/straightth/graphic/editor/Main.java
  com.github.straightth.graphic.editor.Main
 com/github/straightth/graphic/editor/view/menubar/buttons/ZoomRadioMenuItem.java
  com.github.straightth.graphic.editor.view.menubar.buttons.ZoomRadioMenuItem
-com/github/straightth/graphic/editor/view/toolbar/buttons/ZoomToggleButton.java
- com.github.straightth.graphic.editor.view.toolbar.buttons.ZoomToggleButton
-com/github/straightth/graphic/editor/view/toolbar/buttons/SizeToggleButton.java
- com.github.straightth.graphic.editor.view.toolbar.buttons.SizeToggleButton
-com/github/straightth/graphic/editor/view/toolbar/buttons/ColorToggleButton.java
- com.github.straightth.graphic.editor.view.toolbar.buttons.ColorToggleButton
-com/github/straightth/graphic/editor/view/menubar/buttons/ToolRadioMenuItem.java
- com.github.straightth.graphic.editor.view.menubar.buttons.ToolRadioMenuItem
-com/github/straightth/graphic/editor/view/menubar/buttons/ColorRadioMenuItem.java
- com.github.straightth.graphic.editor.view.menubar.buttons.ColorRadioMenuItem
-com/github/straightth/graphic/editor/view/toolbar/buttons/ToolToggleButton.java
- com.github.straightth.graphic.editor.view.toolbar.buttons.ToolToggleButton
-com/github/straightth/graphic/editor/view/menubar/buttons/SizeRadioMenuItem.java
- com.github.straightth.graphic.editor.view.menubar.buttons.SizeRadioMenuItem
+com/github/straightth/graphic/editor/draw/text/TextRectangleWithPivot.java
+ com.github.straightth.graphic.editor.draw.text.TextRectangleWithPivot
+com/github/straightth/graphic/editor/view/menubar/MyMenuBar.java
+ com.github.straightth.graphic.editor.view.menubar.MyMenuBar
+com/github/straightth/graphic/editor/control/tool/Tool.java
+ com.github.straightth.graphic.editor.control.tool.Tool
+ com.github.straightth.graphic.editor.control.tool.Tool$1
 com/github/straightth/graphic/editor/draw/Drawer.java
  com.github.straightth.graphic.editor.draw.Drawer
-com/github/straightth/graphic/editor/windows/LoadWindow.java
- com.github.straightth.graphic.editor.windows.LoadWindow
-com/github/straightth/graphic/editor/file/Saver.java
- com.github.straightth.graphic.editor.file.Saver
+com/github/straightth/graphic/editor/GraphicEditor.java
+ com.github.straightth.graphic.editor.GraphicEditor
+com/github/straightth/graphic/editor/view/menubar/buttons/ToolRadioMenuItem.java
+ com.github.straightth.graphic.editor.view.menubar.buttons.ToolRadioMenuItem
+com/github/straightth/graphic/editor/view/toolbar/MyToolBar.java
+ com.github.straightth.graphic.editor.view.toolbar.MyToolBar
+com/github/straightth/graphic/editor/view/toolbar/buttons/ToolToggleButton.java
+ com.github.straightth.graphic.editor.view.toolbar.buttons.ToolToggleButton
+com/github/straightth/graphic/editor/windows/HelpWindow.java
+ com.github.straightth.graphic.editor.windows.HelpWindow
+com/github/straightth/graphic/editor/draw/buffer/BufferedImage.java
+ com.github.straightth.graphic.editor.draw.buffer.BufferedImage
+com/github/straightth/graphic/editor/view/menubar/menus/tool/SetToolMenu.java
+ com.github.straightth.graphic.editor.view.menubar.menus.tool.SetToolMenu
 com/github/straightth/graphic/editor/draw/selection/SelectionRectangleWithPivot.java
  com.github.straightth.graphic.editor.draw.selection.SelectionRectangleWithPivot
 com/github/straightth/graphic/editor/view/Appearance.java
  com.github.straightth.graphic.editor.view.Appearance
-com/github/straightth/graphic/editor/GraphicEditor.java
- com.github.straightth.graphic.editor.GraphicEditor
 com/github/straightth/graphic/editor/control/Controller.java
  com.github.straightth.graphic.editor.control.Controller
-com/github/straightth/graphic/editor/draw/Magnifier.java
- com.github.straightth.graphic.editor.draw.Magnifier
-com/github/straightth/graphic/editor/file/Loader.java
- com.github.straightth.graphic.editor.file.Loader
+com/github/straightth/graphic/editor/utils/TextBlock.java
+ com.github.straightth.graphic.editor.utils.TextBlock
 com/github/straightth/graphic/editor/draw/CanvasLayout.java
  com.github.straightth.graphic.editor.draw.CanvasLayout

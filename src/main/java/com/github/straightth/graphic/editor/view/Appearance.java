@@ -43,10 +43,8 @@ public class Appearance extends Group {
 
     private void eventHandlersInitialization() {
         addEventHandler(KeyEvent.KEY_PRESSED,
-                (final KeyEvent keyEvent) -> {
-            GraphicEditor.getCanvasLayout().fireEvent(new MyKeyEvent(MyKeyEvent.KEY_PRESSED,
-                    keyEvent.getCode(), keyEvent.isControlDown()));
-        });
+                (final KeyEvent keyEvent) -> GraphicEditor.getCanvasLayout().fireEvent(
+                        new MyKeyEvent(MyKeyEvent.KEY_PRESSED, keyEvent.getCode(), keyEvent.isControlDown())));
     }
 
     public static int getWidth() {

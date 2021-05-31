@@ -23,12 +23,13 @@ public enum Tool {
 
     private Color color = Color.BLACK;
 
-    private Cursor cursor;
+    private Cursor cursor = Cursor.DEFAULT;
 
     Tool(String text) {
         this.text = text;
     }
 
+    @SuppressWarnings("SameParameterValue")
     Tool(String text, Cursor cursor) {
         this(text);
         this.cursor = cursor;

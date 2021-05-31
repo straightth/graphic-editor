@@ -1,7 +1,6 @@
 package com.github.straightth.graphic.editor.draw;
 
 import com.github.straightth.graphic.editor.utils.Coordinate;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;

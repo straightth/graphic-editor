@@ -15,6 +15,7 @@ public class TextBlock extends VBox {
         texts.add(text);
     }
 
+    @SuppressWarnings("unused")
     public void addAllTexts(Text... texts) {
         getChildren().addAll(texts);
         this.texts.addAll(Arrays.asList(texts));

@@ -3,11 +3,11 @@ package com.github.straightth.graphic.editor.draw.buffer;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.WritableImage;
 
 public class BufferedImage extends ImageView {
-    private WritableImage writableImage;
+    private Image image;
 
     public BufferedImage() {
         super();
@@ -19,20 +19,12 @@ public class BufferedImage extends ImageView {
         SnapshotParameters snapshotParameters = new SnapshotParameters();
         snapshotParameters.setViewport(new Rectangle2D(x, y, width, height));
 
-        writableImage = canvas.snapshot(snapshotParameters, null);
+        image = canvas.snapshot(snapshotParameters, null);
 
-        setImage(writableImage);
-    }
-
-    public WritableImage getWritableImage() {
-        return writableImage;
+        setImage(image);
     }
 
     public boolean isEmpty() {
-        return writableImage == null;
-    }
-
-    public void clear() {
-        writableImage = null;
+        return image == null;
     }
 }

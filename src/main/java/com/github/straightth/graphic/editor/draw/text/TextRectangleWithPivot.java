@@ -14,8 +14,6 @@ import org.fxmisc.richtext.InlineCssTextArea;
 
 import java.util.Objects;
 
-import static com.github.straightth.graphic.editor.utils.Binder.bindWidth;
-import static com.github.straightth.graphic.editor.utils.Binder.bindHeight;
 import static com.github.straightth.utils.Loop.range;
 
 public class TextRectangleWithPivot extends Group {
@@ -35,8 +33,8 @@ public class TextRectangleWithPivot extends Group {
         textArea.getStylesheets().add(
                 Objects.requireNonNull(getClass().getResource("color/black.css")).toExternalForm());
 
-        bindWidth(textArea, rectangle.widthProperty());
-        bindHeight(textArea, rectangle.heightProperty());
+        textArea.prefWidthProperty().bind(rectangle.widthProperty());
+        textArea.prefHeightProperty().bind(rectangle.heightProperty());
     }
 
     public void setPivot(double x, double y) {
@@ -63,14 +61,6 @@ public class TextRectangleWithPivot extends Group {
         rectangle.resize(target, borderWidth, borderHeight);
         textArea.setLayoutX(rectangle.getX());
         textArea.setLayoutY(rectangle.getY());
-    }
-
-    public void setWidth(double width) {
-        rectangle.setWidth(width);
-    }
-
-    public void setHeight(double height) {
-        rectangle.setHeight(height);
     }
 
     public String getText() {
