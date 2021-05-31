@@ -20,10 +20,13 @@ public class MyMenuBar extends MenuBar {
         super();
 
         Menu file = new Menu("File");
+
         MenuItem open = new MenuItem("Open");
         open.setOnAction(actionEvent -> LoadWindow.show());
+
         MenuItem save = new MenuItem("Save");
         save.setOnAction(actionEvent -> SaveWindow.show());
+
         file.getItems().addAll(open, save);
 
         Menu edit = new Menu("Edit");
