@@ -12,6 +12,8 @@ import java.io.IOException;
 public class AboutWindow {
     private static final int INDENT = 5;
 
+    private static final String LINK = "https://github.com/straightth/graphic-editor";
+
     private static final Stage stage = new Stage();
 
     private AboutWindow() {
@@ -26,11 +28,10 @@ public class AboutWindow {
         hBox.setAlignment(Pos.CENTER);
         hBox.setSpacing(5);
 
-        Hyperlink hyperlink = new Hyperlink("https://github.com/straightth/java-fx-graphic-editor");
+        Hyperlink hyperlink = new Hyperlink(LINK);
         hyperlink.setOnAction(actionEvent -> {
             try {
-                new ProcessBuilder("x-www-browser",
-                        "https://github.com/straightth/java-fx-graphic-editor").start();
+                new ProcessBuilder("x-www-browser", LINK).start();
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
@@ -40,7 +41,9 @@ public class AboutWindow {
 
         hBox.getChildren().add(hyperlink);
 
-        stage.setScene(new Scene(hBox, 352, new Text("/").getLayoutBounds().getHeight() + INDENT * 3));
+        stage.setScene(new Scene(hBox,
+                new Text(LINK).getLayoutBounds().getWidth() + INDENT * 3,
+                new Text("").getLayoutBounds().getHeight() + INDENT * 3));
 
         stage.show();
     }
