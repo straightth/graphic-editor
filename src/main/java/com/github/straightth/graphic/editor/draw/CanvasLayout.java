@@ -204,7 +204,7 @@ public class CanvasLayout extends Pane {
                 final MouseEvent mouseEvent) -> {
             if (getTool() == Tool.TEXT
                     && Math.abs(mouseEvent.getX() - textRectangle.getPivot().x) > 3
-                    && Math.abs(mouseEvent.getY() - textRectangle.getPivot().y) > 3 ) {
+                    && Math.abs(mouseEvent.getY() - textRectangle.getPivot().y) > 3) {
                 Controller.setDisableToolSizeControls(true);
                 Controller.setDisableToolColorControls(true);
                 textRectangle.resize(mouseEvent.getX(), mouseEvent.getY(), canvas.getWidth(), canvas.getHeight());
